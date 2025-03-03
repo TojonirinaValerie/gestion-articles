@@ -35,6 +35,7 @@ import {
 import { capitalize } from "@/lib/utils";
 import ProductUploader from "./product-uploader";
 import Loading from "../shared/loading";
+import { useEffect } from "react";
 
 type ProductFormProps = {
   defaultValue?: Product;
@@ -64,7 +65,6 @@ const ProductForm: React.FC<ProductFormProps> = ({
       category: defaultValue ? defaultValue.category : "",
     },
   });
-  console.log("default category =>", defaultValue?.category);
   // -------------------------------------------------------------------------
 
   // Methoode
@@ -201,7 +201,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
           <Button
             variant="default"
             color="grey"
-            disabled={!form.formState.isValid || isLoading}
+            disabled={isLoading}
           >
             {type === "add" ? "Add Product" : "Update Product"}
           </Button>
