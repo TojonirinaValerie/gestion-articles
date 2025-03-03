@@ -8,11 +8,18 @@ interface AppStoreState {
   setCategory: (value: string) => void;
 }
 
-const useAppStore = create<AppStoreState>()((set) => ({
-  searchValue: "",
-  category: "all category",
-  setSearchValue: (value) => set({ searchValue: value }),
-  setCategory: (value) => set({ category: value }),
-}));
+const useAppStore = create<AppStoreState>()(
+  persist(
+    (set) => ({
+      searchValue: "",
+      category: "all category",
+      setSearchValue: (value) => set({ searchValue: value }),
+      setCategory: (value) => set({ category: value }),
+    }),
+    {
+      name: "zustand-store",
+    }
+  )
+);
 
 export { useAppStore };

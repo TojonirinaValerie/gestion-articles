@@ -76,14 +76,14 @@ interface PartialStarProps {
   fillPercentage: number
   size: number
   className?: string
-  Icon: React.ReactElement
+  Icon: React.ReactElement<{size: number, className: string}>
 }
 const PartialStar = ({ ...props }: PartialStarProps) => {
   const { fillPercentage, size, className, Icon } = props
 
   return (
     <div style={{ position: "relative", display: "inline-block" }}>
-      {React.cloneElement(Icon, {
+      {React.cloneElement<{size: number, className: string}>(Icon, {
         size,
         className: cn("fill-transparent", className),
       })}

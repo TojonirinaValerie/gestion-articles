@@ -3,21 +3,22 @@
 import {
   AlertDialog,
   AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState } from "react";
 
 const DialogInfo = () => {
   const [isOpen, setIsOpen] = useState<boolean>(
-    localStorage.getItem("undestand") ? false : true
+    typeof window !== "undefined"
+      ? localStorage.getItem("undestand")
+        ? false
+        : true
+      : true
   );
 
   const handleUnderstand = () => {

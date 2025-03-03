@@ -1,5 +1,4 @@
 import DashboardLayout from "@/components/layout/dashboard";
-import ToggleModeButton from "@/components/toggle-mode-button";
 import { Toaster } from "sonner";
 
 export const metadata = {
