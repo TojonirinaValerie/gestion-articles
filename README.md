@@ -2,6 +2,8 @@
 
 Ce projet est un petit dashboard développé avec Next.js pour la gestion d'articles. Il permet aux utilisateurs d'ajouter, de modifier, de supprimer et de visualiser des articles dans une interface conviviale. Les données proviennent de l'API fakestoreapi.com, donc les modifications, ajouts et suppressions ne sont pas persistants.
 
+Live: [gestion-articles-amber.vercel.app](https://gestion-articles-amber.vercel.app/product)
+
 ## ✨ Fonctionnalités principales
 - Liste des articles : Affichage dynamique des articles existants avec la possibilité de trier et filtrer les données.
 - Détail des articles : Affichage des informations complètes d'un article en cliquant dessus pour une vue détaillée.
